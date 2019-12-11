@@ -60,6 +60,8 @@
 </template>
 
 <script>
+  import CalcLogic from '../utils/CalcLogic';
+
   export default {
     data: () => ({
       operandA: null,
@@ -90,10 +92,10 @@
       calculate(){
         //Get result
         switch (this.selectedAction) {
-          case '+' : this.result = this.sum(this.operandA, this.operandB); break
-          case '/' : this.result = this.divide(this.operandA, this.operandB); break
-          case '%' : this.result = this.remainderOfDivision(this.operandA, this.operandB); break
-          case '>' : this.result = this.highestNumber(this.operandA, this.operandB); break
+          case '+' : this.result = CalcLogic.sum(this.operandA, this.operandB); break
+          case '/' : this.result = CalcLogic.divide(this.operandA, this.operandB); break
+          case '%' : this.result = CalcLogic.remainderOfDivision(this.operandA, this.operandB); break
+          case '>' : this.result = CalcLogic.highestPrimeNumber(this.operandA, this.operandB); break
           default : this.result = 'Select action'; break
         }
 
@@ -113,18 +115,6 @@
           action: actionTitle,
           result: this.result,
         })
-      },
-      sum(a, b){
-        return Number(a) + Number(b)
-      },
-      divide(a, b){
-        return (a / b).toFixed(10)
-      },
-      remainderOfDivision(a, b){
-        return a % b
-      },
-      highestNumber(a, b){
-        return a > b ? a : b
       },
     },
   }
