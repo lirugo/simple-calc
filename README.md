@@ -1,4 +1,6 @@
 # Simple-calc
+![dark](http://i.imgur.com/DZidxuE.png)
+![light](http://i.imgur.com/Prhs5OF.png)
 
 ## Project stack
 - Vue.js
