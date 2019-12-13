@@ -2,7 +2,7 @@ class CalcLogic {
 
     sum(a, b){ return Number(a) + Number(b) }
 
-    divide(a, b){ return (a / b).toFixed(10) }
+    divide(a, b){ return (a / b).toFixed(2) }
 
     remainderOfDivision(a, b){ return a % b }
 
