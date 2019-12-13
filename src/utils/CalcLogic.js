@@ -1,12 +1,12 @@
 class CalcLogic {
 
-    static sum(a, b){ return Number(a) + Number(b) }
+    sum(a, b){ return Number(a) + Number(b) }
 
-    static divide(a, b){ return (a / b).toFixed(10) }
+    divide(a, b){ return (a / b).toFixed(10) }
 
-    static remainderOfDivision(a, b){ return a % b }
+    remainderOfDivision(a, b){ return a % b }
 
-    static highestPrimeNumber(a, b){
+    highestPrimeNumber(a, b){
         //Add check last number
         b++;
         let maxPrime = 2

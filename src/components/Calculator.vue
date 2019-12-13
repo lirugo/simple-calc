@@ -36,24 +36,7 @@
       </v-col>
 
       <v-col>
-        <v-card
-                class="mx-auto"
-                max-width="700"
-                outlined
-        >
-          <v-card-text>
-            <div class="text-right">
-              <small>
-                *Data will release after page refresh
-              </small>
-            </div>
-            <v-data-table
-                    :headers="calcHeaders"
-                    :items="calcHistory"
-                    :items-per-page="5"
-            />
-          </v-card-text>
-        </v-card>
+        <calc-history :calcHistory="calcHistory"/>
       </v-col>
     </v-row>
   </v-container>
@@ -61,8 +44,12 @@
 
 <script>
   import CalcLogic from '../utils/CalcLogic';
+  import CalcHistory from '../components/CalcHistory'
 
   export default {
+    components: {
+      CalcHistory,
+    },
     data: () => ({
       operandA: null,
       operandB: null,
@@ -73,18 +60,6 @@
         { action: '/', title: '/ (divide)' },
         { action: '%', title: '% (remainder of a division)' },
         { action: '>', title: 'Highest prime number between A and B' },
-      ],
-
-      calcHeaders: [
-        { text: '#', value: 'id', align: 'center',},
-        { text: 'Operand A', value: 'operandA', align: 'right',},
-        { text: 'Action', value: 'action', align: 'center',},
-        { text: 'Operand B', value: 'operandB' },
-        {
-          text: 'Result',
-          align: 'left',
-          value: 'result',
-        },
       ],
       calcHistory: [],
     }),
