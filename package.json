@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test": "mocha -r esm --timeout=10000",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.4.3",
+    "esm": "^3.2.25",
+    "mocha": "^6.2.2",
     "vue": "^2.6.10",
     "vuetify": "^2.1.0"
   },

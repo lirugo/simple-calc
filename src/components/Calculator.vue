@@ -92,10 +92,10 @@
       calculate(){
         //Get result
         switch (this.selectedAction) {
-          case '+' : this.result = CalcLogic.sum(this.operandA, this.operandB); break
-          case '/' : this.result = CalcLogic.divide(this.operandA, this.operandB); break
-          case '%' : this.result = CalcLogic.remainderOfDivision(this.operandA, this.operandB); break
-          case '>' : this.result = CalcLogic.highestPrimeNumber(this.operandA, this.operandB); break
+          case '+' : this.result = new CalcLogic().sum(this.operandA, this.operandB); break
+          case '/' : this.result = new CalcLogic().divide(this.operandA, this.operandB); break
+          case '%' : this.result = new CalcLogic().remainderOfDivision(this.operandA, this.operandB); break
+          case '>' : this.result = new CalcLogic().highestPrimeNumber(this.operandA, this.operandB); break
           default : this.result = 'Select action'; break
         }
 
